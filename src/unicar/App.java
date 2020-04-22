@@ -46,11 +46,8 @@ public class App extends Unicap{
                     Unicap.adicionaAluno(a);                    
                     } catch (MesmaMatriculaException | MesmoCarroException exception){
                         System.out.println(exception.getMessage());                      
-                    }
-                    
+                    }                    
                     break;
-
-
                     
                 case 2: 
                     System.out.println("Informe a placa do seu carro: ");

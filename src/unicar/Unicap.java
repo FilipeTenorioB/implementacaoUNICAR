@@ -14,7 +14,7 @@ public class Unicap {
         int i;
 
         for (i = 0; i <= this.qtdAlunos; i++) {
-            if (this.alunos[i].getMatricula() != a.getMatricula) {
+            if (this.alunos[i].getMatricula() == a.getMatricula()) {
                 throw new MesmaMatriculaException("Este aluno já está cadastrado.");
             }
 
