@@ -44,7 +44,7 @@ public class App extends Unicap{
                     try{
                     Aluno a= new Aluno(nome,matricula,cor,modelo,placa);
                     Unicap.adicionaAluno(a);                    
-                    } catch (MesmaMatriculaException | MesmoCarroException exception){
+                    } catch (Exception exception){
                         System.out.println(exception.getMessage());                      
                     }                    
                     break;
@@ -93,8 +93,5 @@ public class App extends Unicap{
         }while(opcao != 0);
     }
 
-    private boolean getMessage() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+ 
 }
