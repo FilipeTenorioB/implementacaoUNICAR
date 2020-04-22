@@ -10,11 +10,19 @@ public class Unicap {
         this.qtdAlunos= 0;
     }
     
-    public void adicionaAluno(Aluno a){
+    public void adicionaAluno(Aluno a) throws MesmaMatriculaException {
         int i;
         
         for(i= 0; i <= this.qtdAlunos ; i++){
-            if(this.alunos[i] == null || (this.alunos[i].getMatricula() != a.getMatricula())){
+            if(this.alunos[i].getMatricula() != a.getMatricula){
+                throw new MesmaMatriculaException ("Este aluno já está cadastrado.");
+            }
+            
+            if(this.alunos[i].getCarro().getPlaca().equals(aluno.getCarro().getPlaca())) {
+                throw new MesmaMatriculaException ("Este aluno já está cadastrado.");
+            }
+            
+            if(this.alunos[i] == null) {
                 this.alunos[this.qtdAlunos]= a;
                 this.qtdAlunos++;   
                 System.out.println("Permitida a entrega do adesivo!!");
