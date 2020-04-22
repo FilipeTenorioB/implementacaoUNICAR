@@ -27,7 +27,7 @@ public class Aluno {
     
     public void setCarro(String cor, String modelo, String placa){
         this.carro.setCor(cor);
-        this.carro.setModelo(modelo);
+        this.carro.setModelo(modelo);       
         this.carro.setPlaca(placa);
     }
     
