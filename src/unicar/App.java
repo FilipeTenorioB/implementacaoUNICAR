@@ -41,10 +41,16 @@ public class App extends Unicap{
                         System.out.println("Placa já cadastrada, informe outra placa");
                         placa= input.nextLine();
                     }
+                    try{
                     Aluno a= new Aluno(nome,matricula,cor,modelo,placa);
-                    Unicap.adicionaAluno(a);
-                    break;
+                    Unicap.adicionaAluno(a);                    
+                    } catch (MesmaMatriculaException | MesmoCarroException exception){
+                        System.out.println(exception.getMessage());                      
+                    }
                     
+                    break;
+
+
                     
                 case 2: 
                     System.out.println("Informe a placa do seu carro: ");
@@ -88,6 +94,10 @@ public class App extends Unicap{
             }
             
         }while(opcao != 0);
+    }
+
+    private boolean getMessage() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

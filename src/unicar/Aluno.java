@@ -6,6 +6,7 @@ public class Aluno {
     protected String nome;
     protected int matricula;
     protected Carro carro;
+    int getMatricula;
 
     public Aluno(String nome, int matricula, String cor, String modelo, String placa) {
         this.nome = nome;
